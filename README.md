@@ -1,0 +1,2 @@
+# SimpleFunctions
+Making JavaScript easier.
