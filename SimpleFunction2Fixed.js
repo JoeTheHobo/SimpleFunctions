@@ -1,7 +1,4 @@
-
-	
-  
-  /*Tutorial
+ /*Tutorial
   	Art/Canvas:
     	sfMakeCanvas("id","width","height","color"); 
       - Makes a canvas
@@ -108,6 +105,7 @@
     sfmyCanvas.id = a;
     sfmyCanvas.width = b;
     sfmyCanvas.height = c;
+    console.log("HERE:" + sfmyCanvas);
     document.body.appendChild(sfmyCanvas);
     
     if (d) {
