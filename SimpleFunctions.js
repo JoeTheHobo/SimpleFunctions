@@ -1,9 +1,4 @@
 
-	window.onload = function() {
-    
-  	}
-    
-    
 
   
   /*Tutorial
