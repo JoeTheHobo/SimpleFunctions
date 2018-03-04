@@ -89,12 +89,12 @@
   
   //START ART FUNCTION/GAME
   function sfDrawBlock(a,b,c,d,e,f) {
-    var sfCtx = sfgid(a).getContext("2d");
+    var sfCtx = sfGid(a).getContext("2d");
     
     if (b == "fs") {
     	f = c;
-      e = sfgid(a).height;
-      d = sfgid(a).width;
+      e = sfGid(a).height;
+      d = sfGid(a).width;
       c = 0;
       b = 0;
     }
