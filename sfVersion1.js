@@ -140,5 +140,31 @@ function sfRandom(num,z) {
   function sfDisconnect() {
   	sfConnects = 0;
   }
+
+
+
+function sfDebugOpen() {
+  	window.sfDebugColor = "black";
+    window.sfDebugText = "DEBUG";
+  }
+  function sfDebugStyle(other,color) {
+  	if (other) {
+    	sfDebugText = other;
+    }
+    if (color) {
+    	sfDebugColor = color;
+    }
+  }
+  function sfDebug(item,type,name) {
+    if (!name) {
+      name = "";
+    }
+    if (type) {
+      sfCreate(type,sfDebugText + " " + name + ": " + item,"SFDEBUG");
+      sfGid("SFDEBUG",0,sfDebugColor);
+    } else {
+      console.log("DEBUG" + " " + name + ": " + item,);
+    }
+  }
   
 	//END # FUNCTIONS
