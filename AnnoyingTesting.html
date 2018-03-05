@@ -1,0 +1,81 @@
+<body>
+
+  <script src="https://rawgit.com/JoeTheHobo/SimpleFunctions/master/sfVersion1.js"></script>
+
+  <script>
+  sfDebugOpen();
+  //PUT YOUR FUNCTION/JAVASCRIPT HERE
+  	sfMakeCanvas("a",300,300,"grey");
+    sfConnect("a");
+    //sfDrawBorder(30,"black");
+    //sfDrawBlock("c","t",30,30,"grey");
+    //sfDrawBlock("r","c",30,30,"grey");
+    sfDrawPxDefine(100,"black");
+    sfDrawPx(0,0);
+    
+    window.sfPxUseSize = 0;
+    window.sfPxUseColor = 0;
+    window.sfPxSize = 1;
+    window.sfPxColor = "black";
+    function sfDrawPxDefine(size,color) {
+    	if (size !== 0) {
+      	sfPxSize = size;
+        sfPxUseSize = 1;
+      }
+      if (color) {
+      	sfPxUseColor = 1;
+      	sfPxColor = color;
+      }
+    }
+    
+    
+    function sfDrawPx(id,x,y,size,color) {
+    	if (sfConnects) {
+      	color = size;
+        size = y;
+        y = x;
+        x = id;
+        if (sfPxUseSize == 1) {
+        	size = sfPxSize;
+        }
+        if (sfPxUseColor == 1) {
+        	color = sfPxColor;
+        }
+        y = y * size;
+        x = x * size;
+        sfDrawBlock(x,y,size,size,color);
+      } else {
+      	if (sfPxUseSize == 1) {
+        	size = sfPxSize;
+        }
+      	y = y * size;
+        x = x * size;
+        if (sfPxUseColor == 1) {
+        	color = sfPxColor;
+        }
+        sfDrawBlock(id,x,y,size,size,color);
+      }
+    }
+    function sfDrawBorder(id,size,color) {
+    	if (sfConnects) {
+      	color = size;
+        size = id;
+        sfCanWidth = sfGid(sfConnects).width;
+        sfCanHeight = sfGid(sfConnects).height;
+      	sfDrawBlock("l","t",sfCanWidth,size,color);
+        sfDrawBlock("l",sfCanHeight - size,sfCanWidth,size,color);
+      	sfDrawBlock("l","t",size,sfCanHeight,color);
+      	sfDrawBlock(sfCanWidth - size,"t",size,sfCanHeight,color);
+
+      } else {
+      	sfCanWidth = sfGid(id).width;
+        sfCanHeight = sfGid(id).height;
+      	sfDrawBlock(id,"l","t",sfCanWidth,size,color);
+        sfDrawBlock(id,"l",sfCanHeight - size,sfCanWidth,size,color);
+      	sfDrawBlock(id,"l","t",size,sfCanHeight,color);
+      	sfDrawBlock(id,sfCanWidth - size,"t",size,sfCanHeight,color);
+      }
+    }
+    
+  </script>
+</body>
