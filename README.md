@@ -5,12 +5,19 @@ Welcome to "Simple Functions", where we take big functions, and simplify them.
 In this document I'll explain what all the functions do and how to use them. Lets start off with 
 
 BASIC FUNCTIONS
+	sfGid(id,"text","color");
+		-This function is like the document.getElementById();
+		Put the id in and your set. You don't have to change the input in the other sections
+		If you put info in the "text" part, that will change its innerHTML
+		If you put text in the "color" part, that will change the items color.
+		If you don't want to put the "text" in, but you want to put "color" in, put 0 for "text"
+		--
 	sfRepeat(Func, Times); 
 		- This functions repeats whatever Function you told it to repeat. It will repeat "Times" times.
 		- Example,
 			sfRepeat(function() {console.log("here"},10);
 				- This will do Console.log("here") ten times.
-	
+		--
 	sfRandom(num,z);
 		- This will generate a whole number from 1-Num.
 		- "z" checks if you want to start at 1 or 0. NOTE: You don't have to put this part in.
@@ -19,7 +26,7 @@ BASIC FUNCTIONS
 				-This will return a random number 1-10.
 			sfRandom(10,0);
 				-This will return a random number 0-10.
-				
+		--	
 	sfFindArray(array,item);
 		-This will return the number "item" is inside an array.
 		-Example,
@@ -27,6 +34,22 @@ BASIC FUNCTIONS
 			sfFindArray(animals,"dog");
 				-This will return the number 2.
 				-NOTE: Arrays always start at number 0.
+		--
+	DEBUGGING:
+		-This function library wants to make Debugging a more enjoyable expirence. So we added this little section for all the people that get annoyed with bugs appear.
+		--
+		sfDebugOpen();
+			-This will open the debug library, All the variables. So this will take up just a little space. Don't worry about it. This is required though to do all the other Functions, so put this high in your code.
+		sfDebug(item,"type","Debug Text");
+			-This can do many things, lets start by breaking this appart.
+			sfDebug(item);
+				-This will console.log("DEBUG: " + item);
+				Where item is whatever you are needing logged. Like Vars
+			sfDebug(item,"type");
+				-"type" can = any HTML type thing. EX: "P" (Paragrpah), "H1" (Header 1), "button" (button).
+				So instead of logging it, it will create a new element and show it there.
+				The "debug Text" effects the text.
+		There is more you are able to do with the debugging, we just need to finish prototyping it all.
 				
 WEB DESIGN FUNCTIONS
 	sfCreate("ELEMENT","innerHTML","id","color");
@@ -37,7 +60,7 @@ WEB DESIGN FUNCTIONS
 				-This will create a <p id="me" style="color:red">Hello World</p>
 			sfCreate("BUTTON","Press Me");
 				-This will create <button>Press Me</button>
-				
+		--	
 	sfDispaly("display","id");
 		-This will show/hide an element with the id.
 		-Stuff you can type in "display" are ,
@@ -56,7 +79,7 @@ ART FUNCTIONS
 		Example,
 			sfMakeCanvas("me",200,200,"red");
 				-This will make a 200x200 red canvas with id "me".
-				
+		--		
 	sfDrawBlock("Parent Id",xpos,ypos,width,height,"color");
 		-This will make a block inside a canvas.
 		Make sure the "Parent Id" is the id of a canvas you have made.
