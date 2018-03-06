@@ -5,6 +5,7 @@ Welcome to "Simple Functions", where we take big functions, and simplify them.
 In this document I'll explain what all the functions do and how to use them. Lets start off with 
 
 BASIC FUNCTIONS
+
 	sfGid(id,"text","color");
 		-This function is like the document.getElementById();
 		Put the id in and your set. You don't have to change the input in the other sections
@@ -52,6 +53,7 @@ BASIC FUNCTIONS
 		There is more you are able to do with the debugging, we just need to finish prototyping it all.
 				
 WEB DESIGN FUNCTIONS
+
 	sfCreate("ELEMENT","innerHTML","id","color");
 		-This will create an element with text, an id, and color!
 		-"ELEMENT" is required to put in. You can put 0 in for innerHTML or id. That will ignor that part. Just ignor color if you don't want color.
@@ -73,6 +75,7 @@ WEB DESIGN FUNCTIONS
 				-This will Hide the <p> text.
 				
 ART FUNCTIONS
+
 	sfMakeCanvas("id",width,height,"color");
 		-This will create a canvas with the id given. It will be your height and width with your color.
 		You can leave color blank if you want. It will auto color white.
