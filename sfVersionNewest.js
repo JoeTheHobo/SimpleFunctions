@@ -7,7 +7,7 @@
   	sfCreateType = type;
   }
   
-  function sfCreate(element,text,id,color) {
+  function sfCreate(element,text,id,color,parent) {
   if (sfCreateType == 0) {
   	var sfNew = document.createElement(element);
   } else {
@@ -25,7 +25,12 @@
     if (color) {
     	sfNew.style.color = color;
     }
-    document.body.appendChild(sfNew);
+	if (parent) {
+	    document.getElementById(parent).appendChild(sfNew);	
+	} else {
+	    document.body.appendChild(sfNew);
+
+	}
     return(sfGid(id));
   }
   
@@ -245,4 +250,17 @@ function sfDebugOpen() {
     }
   }
   
+  
+  
+  //EXTRAS/WORK ONS
+  function sfMakeBanner(id,size,color) {
+		sfCreate("div",0,id);
+		sfBanner(id,size,color);
+	}
+
+	function sfBanner(id,height,color) {
+		sfGid(id).style.width = "100%";
+		sfGid(id).style.height = height + "px";
+		sfGid(id).style.backgroundColor = color;
+	}
 	//END # FUNCTIONS
