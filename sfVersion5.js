@@ -32,7 +32,7 @@
 
 	}
     return(sfGid(id));
-  }
+  }//
   
   function sfDisplay(display,id) {
   display = display.toString();
