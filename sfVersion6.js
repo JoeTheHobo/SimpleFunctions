@@ -183,7 +183,7 @@ var sfMath = {
 							return sfHighest;
 						},
 			"add" : function(num,num2) {
-				return (num * 10000 + mum2 * 10000) / 10000;
+				return (num * 10000 + num2 * 10000) / 10000;
 			}
 		};
 
