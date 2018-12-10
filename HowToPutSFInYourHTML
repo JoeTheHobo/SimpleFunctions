@@ -1,11 +1,11 @@
 URL
-https://rawgit.com/JoeTheHobo/SimpleFunctions/master/sfVersionNewest.js
+https://cdn.jsdelivr.net/gh/JoeTheHobo/SimpleFunctions@master/sfVersionNewest.js
 
 Or:
 
 <body>
 
-  <script src="https://rawgit.com/JoeTheHobo/SimpleFunctions/master/sfVersionNewest.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/JoeTheHobo/SimpleFunctions@master/sfVersionNewest.js"></script>
 
   <script>
   //PUT YOUR FUNCTION/JAVASCRIPT HERE
